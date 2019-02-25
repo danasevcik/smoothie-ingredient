@@ -1,0 +1,7 @@
+<%= form_for(@ingredient) do |f| %>
+  <%= f.text_field :name %>
+
+  <%= select_tag 'smoothie', options_for_select(@smoothies.collect {|smoothie| [smoothie.name]}) %>
+
+  <%= f.submit %>
+<% end %>
